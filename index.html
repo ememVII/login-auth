@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Signup</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div class="container center">
+        <div class="card center w-50 mt-5 py-4">
+          <h2 class="mb-4">Smart Sign up</h2>
+          <div id="signUp-form" class="form w-75">
+            <div class="d-flex align-items-center">
+              <div class="flex-grow-1">
+                <label for="signUpName">USERNAME</label>
+                <input
+                  id="signUpName"
+                  type="text"
+                  class="form-control mb-3 mt-1 emptyForm"
+                  placeholder="Enter your Name"
+                />
+              </div>
+              <button class="resetBtn" id="resetNameBtn">&times;</button>
+            </div>
+            <div
+              id="nameWarning"
+              class="alert alert-warning d-none"
+              role="alert"
+            >
+              Your name must begin with an Uppercase letter and cannot contain
+              any Numbers or Special Characters
+            </div>
+            <div class="d-flex align-items-center">
+              <div class="flex-grow-1">
+                <label for="signUpMail">EMAIL</label>
+                <input
+                  id="signUpMail"
+                  type="text"
+                  class="form-control mb-3 mt-1 emptyForm"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <button class="resetBtn" id="resetMailBtn">&times;</button>
+            </div>
+            <div
+              id="mailWarning"
+              class="alert alert-warning d-none"
+              role="alert"
+            >
+              Your mail is invalid
+            </div>
+            <div id="emailExist" class="alert alert-danger d-none" role="alert">
+              This email address is already Exists!
+            </div>
+            <div
+              class="passToggler position-relative d-flex align-items-center"
+            >
+              <div class="flex-grow-1">
+                <label for="signUpPass">PASSWORD</label>
+                <input
+                  id="signUpPass"
+                  type="password"
+                  class="form-control mb-3 mt-1 emptyForm"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <button class="resetBtn" id="resetPassBtn">&times;</button>
+              <!-- <span id="eyeSlash"
+                ><i class="fa-solid fa-eye d-block" id="eye"></i
+              ></span> -->
+            </div>
+            <div
+              id="passWarning"
+              class="alert alert-warning d-none"
+              role="alert"
+            >
+              Your Password must be at least 8 characters with at least 1 Upper
+              Case, 1 lower case, and 1 numeric character
+            </div>
+          </div>
+
+          <div id="emptyWarning" class="alert alert-danger d-none" role="alert">
+            All inputs are Required!
+          </div>
+          <div
+            id="signUpSuccess"
+            class="alert alert-success d-none"
+            role="alert"
+          >
+            Your Account has been created.
+          </div>
+          <button id="signUpBtn" class="btn login w-75 my-4">Sign Up</button>
+          <h6>You have an account? <a href="index.html">Signin</a></h6>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/signup.js"></script>
+  </body>
+</html>
